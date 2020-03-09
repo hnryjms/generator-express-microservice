@@ -150,7 +150,7 @@ module.exports = class extends Generator {
 
       this.fs.copy(src, dest, copyOpts);
       const globalFiles = [
-        "package.json",
+        "package.temp.json",
       ];
 
       globalFiles.forEach(f => {
