@@ -1,0 +1,56 @@
+{
+  "name": "@bechtel/<%= name%>'",
+  "version": "<%= version%>",
+  "description": "<%= description%>",
+  "main": "dist/index.js",
+  "private": true,
+  "scripts": {
+    "test": "tsc -p tsconfig.test.json && jest && npx rimraf __test__",
+    "test:watch": "tsc -p tsconfig.test.json && jest --watchAll",
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "bundle": "npx rimraf dist && tsc -d false",
+    "clean:outdir": "npx rimraf __test__ dist",
+    "format": "prettier --check \"src/**/*.ts\" --write",
+    "lint": "eslint --ext \".ts,.js\" src --quiet",
+    "start": "node dist/app.js"
+  },
+  "author": "<%= author %>",
+  "license": "",
+  "jest": {
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>/__test__/"
+    ]
+  },
+  "directories": {
+    "lib": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "reflect-metadata": "^0.1.13",
+    "typedi": "^0.8.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.9.0",
+    "@types/node": "^13.1.8",
+    "@typescript-eslint/eslint-plugin": "^2.16.0",
+    "@typescript-eslint/parser": "^2.16.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-filenames": "^1.3.2",
+    "eslint-plugin-jest": "^23.6.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.5"
+  }
+}
+

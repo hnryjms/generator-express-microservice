@@ -1,0 +1,9 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+      "outDir": "__test__" /* Redirect output structure to the directory. */
+    },
+    "exclude": ["node_modules", "dist"],
+    "include": ["test"]
+  }
+  
